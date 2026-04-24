@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shiv Shiksha Niketan Sr. Sec. School, Pehowa- Nursery to 10th </title>
+    <style>
+            * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f5f5f5;
+      color: #333;
+      line-height: 1.6;
+    }
+
+     .header {
+      width: 100%;
+      height: 90px;
+      background: linear-gradient(to right, #f8f8f8 0%, #ffffff 65%, #0a47a9 100%);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 18px;
+      overflow: hidden;
+      position: fixed;   /* FIXED HEADER */
+      top: 0;
+      left: 0;
+      z-index: 1000;
+    }
+
+    .header::before {
+      content: "";
+      position: absolute;
+      top: -20px;
+      right: 120px;
+      width: 180px;
+      height: 140px;
+      background: rgba(180, 210, 255, 0.18);
+      border-radius: 50%;
+      transform: rotate(-20deg);
+    }
+
+    .header::after {
+      content: "";
+      position: absolute;
+      top: -30px;
+      right: -40px;
+      width: 260px;
+      height: 180px;
+      background: linear-gradient(135deg, #0d5fd4, #003b91);
+      clip-path: polygon(30% 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      z-index: 2;
+      min-width: 0;
+    }
+
+    .header .logo {
+      width: 70px;
+      height: 70px;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+
+    .text-area {
+      color: #08286e;
+      line-height: 1.1;
+      min-width: 0;
+    }
+
+    .school-name {
+      font-size: 20px;
+      font-weight: 800;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .school-sub {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 5px;
+      margin-top: 3px;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .school-line {
+      width: 100%;
+      max-width: 360px;
+      height: 2px;
+      background: #08286e;
+      margin: 5px 0 4px;
+    }
+
+    .address {
+      font-size: 10px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .right-stripes {
+      position: relative;
+      z-index: 2;
+      width: 180px;
+      height: 100%;
+      flex-shrink: 0;
+      display: flex;
+      justify-content: flex-end;
+      align-items: stretch;
+      gap: 8px;
+    }
+
+    .stripe {
+      width: 28px;
+      height: 100%;
+      transform: skewX(-25deg);
+      border-radius: 8px;
+      opacity: 0.95;
+    }
+
+    .s1 { background: rgba(255,255,255,0.18); }
+    .s2 { background: rgba(70,140,255,0.25); }
+    .s3 { background: rgba(50,120,240,0.4); }
+    .s4 { background: rgba(20,90,210,0.55); }
+    .s5 { background: rgba(0,55,150,0.75); }
+
+   
+
+    @media (max-width: 768px) {
+      .header {
+        height: 90px;
+        padding: 0 10px;
+      }
+
+      .logo {
+        width: 55px;
+        height: 55px;
+      }
+
+      .school-name {
+        font-size: 14px;
+      }
+
+      .school-sub {
+        font-size: 8px;
+        letter-spacing: 3px;
+      }
+
+      .address {
+        font-size: 8px;
+      }
+
+      .school-line {
+        max-width: 220px;
+      }
+
+      .right-stripes {
+        width: 90px;
+        gap: 4px;
+      }
+
+      .stripe {
+        width: 14px;
+      }
+    }
+
+
+
+
+    /* Content */
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .container p {
+      margin-bottom: 20px;
+      font-size: 1rem;
+    }
+
+    .container strong {
+      font-weight: bold;
+    }
+
+    /* Image Section */
+    .image-section {
+      margin-top: 20px;
+    }
+
+    .image-section img {
+      width: 100%;
+      border-radius: 5px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero {
+        height: 220px;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .container {
+        margin: 20px auto;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero h1 {
+        font-size: 1.5rem;
+      }
+
+      .breadcrumb span {
+        font-size: 0.8rem;
+        padding: 8px 16px;
+      }
+    }
+
+
+
+
+
+
+
+.section{
+  max-width:1100px;
+  margin:110px auto;
+  background:#fff;
+  border-radius:15px;
+  overflow:hidden;
+  box-shadow:0 12px 30px rgba(0,0,0,0.12);
+}
+
+.hero{
+  background:linear-gradient(135deg,#ff7a00,#ffb200);
+  color:white;
+  padding:35px;
+  text-align:center;
+}
+.hero h1{font-size:30px}
+.hero p{margin-top:8px;font-size:15px;color:#fff6e6}
+
+.content{padding:30px}
+
+.intro{
+  text-align:center;
+  margin-bottom:25px;
+  color:#555;
+  line-height:1.7;
+}
+
+.highlights{
+  display:flex;
+  justify-content:space-between;
+  gap:15px;
+  margin-bottom:30px;
+}
+.highlight{
+  flex:1;
+  background:#fff5e6;
+  padding:15px;
+  border-radius:10px;
+  text-align:center;
+  font-size:14px;
+  color:#ff7a00;
+  font-weight:500;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:20px;
+}
+
+.card{
+  background:#f9fafc;
+  padding:20px;
+  border-radius:12px;
+  transition:0.3s;
+  border-left:4px solid #ff7a00;
+}
+
+.card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 10px 20px rgba(0,0,0,0.1);
+}
+
+.card h3{
+  margin-bottom:10px;
+  color:#ff7a00;
+}
+
+.card ul{padding-left:18px}
+.card li{margin-bottom:6px;font-size:14px}
+
+.cta{
+  text-align:center;
+  margin-top:30px;
+}
+
+.btn{
+  padding:12px 30px;
+  background:#ff7a00;
+  color:white;
+  border-radius:25px;
+  text-decoration:none;
+  font-weight:500;
+  transition:0.3s;
+}
+
+.btn:hover{
+  background:#cc6200;
+  transform:scale(1.05);
+}    
+
+
+
+
+       /*  Footer website---- */
+.school-footer {
+   background: url('./ssn-css-bg-113.jpg') center/cover no-repeat;
+  color: white;
+  padding: 40px 20px;
+  width: 100%;
+}
+
+.school-footer * {
+  box-sizing: border-box;
+}
+
+.school-footer .footer-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* keep all 5 columns in one row */
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Tablet------- */
+@media (max-width: 992px) {
+  .school-footer .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile-------V */
+@media (max-width: 600px) {
+  .school-footer .footer-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.school-footer h2, 
+.school-footer h3 {
+  margin-bottom: 15px;
+}
+
+.school-footer p, 
+.school-footer li {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.school-footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.school-footer ul li {
+  margin-bottom: 8px;
+}
+
+.school-footer ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.school-footer ul li a:hover {
+  text-decoration: underline;
+}
+
+.school-footer .logo {
+  width: 300px;  
+  margin-bottom: 10px;
+  border-radius: 12px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+  
+}
+
+.school-footer .location-map {
+  margin-top: 15px;
+  width: 300px;
+  height: 200px;
+  border: none;
+  border-radius: 8px;
+}
+
+.school-footer .footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255,255,255,0.3);
+  font-size: 14px;
+}
+
+@media (max-width: 600px) {
+  .school-footer {
+    padding: 30px 15px;
+  }
+  .school-footer .logo {
+    width: 60px;
+  }
+}
+
+    </style>
+</head>
+<body>
+        <header class="header">
+    <div class="logo-area">
+      <img src="./ssn main logo.png" alt="School Logo" class="logo">
+
+      <div class="text-area">
+        <div class="school-name">SHIV SHIKSHA NIKETAN</div>
+        <div class="school-sub">SCHOOL</div>
+        <div class="school-line"></div>
+        <div class="address">Model Town, Pehowa, Haryana - 136128</div>
+      </div>
+    </div>
+
+    <div class="right-stripes">
+      <div class="stripe s1"></div>
+      <div class="stripe s2"></div>
+      <div class="stripe s3"></div>
+      <div class="stripe s4"></div>
+      <div class="stripe s5"></div>
+    </div>
+  </header>
+
+
+
+
+
+
+
+
+
+
+  <div class="section">
+
+  <div class="hero">
+    <h1>🎒 Nursery to 10th Program</h1>
+    <p>📘 Strong Basics | Smart Learning | Academic Excellence</p>
+  </div>
+
+  <div class="content">
+
+    <p class="intro">
+      Our Nursery to 10th program focuses on building strong academic foundations, developing skills, and nurturing curiosity in students. With a structured approach, experienced teachers, and continuous assessment, students grow confidently at every stage.
+    </p>
+
+    <div class="highlights">
+      <div class="highlight">✔️ Strong Foundation</div>
+      <div class="highlight">✔️ Regular Tests</div>
+      <div class="highlight">✔️ Personal Attention</div>
+    </div>
+
+    <div class="grid">
+
+      <div class="card">
+        <h3>📚 Subjects Covered</h3>
+        <ul>
+          <li>English & Hindi</li>
+          <li>Mathematics</li>
+          <li>Science</li>
+          <li>Social Studies</li>
+          <li>Computer Basics</li>
+          <li>General Knowledge</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>🧠 Key Features</h3>
+        <ul>
+          <li>Concept-based learning</li>
+          <li>Activity & fun-based learning (for juniors)</li>
+          <li>Strong focus on basics</li>
+          <li>Experienced teachers</li>
+          <li>Doubt-solving sessions</li>
+          <li>Board exam preparation (9th & 10th)</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>📈 Academic Support</h3>
+        <ul>
+          <li>Weekly & monthly tests</li>
+          <li>Homework & assignments</li>
+          <li>Regular progress tracking</li>
+          <li>Revision plans</li>
+          <li>Sample papers & practice tests</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>🎯 Learning Stages</h3>
+        <ul>
+          <li>Pre-Primary (Nursery - UKG)</li>
+          <li>Primary (1st - 5th)</li>
+          <li>Middle School (6th - 8th)</li>
+          <li>Secondary (9th - 10th)</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>👨‍🎓 Who Should Join?</h3>
+        <ul>
+          <li>Students from Nursery to 10th</li>
+          <li>Students needing strong basics</li>
+          <li>Students aiming for high scores</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>🏆 Program Outcomes</h3>
+        <ul>
+          <li>Strong academic foundation</li>
+          <li>Improved confidence</li>
+          <li>Better exam performance</li>
+          <li>All-round development</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="cta">
+      <a href="#" class="btn">Next</a>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+
+   <!-- SSN-school-pehowa---last-footer-- -->
+
+  <footer class="school-footer">
+  
+  
+    <div class="footer-container">
+
+    <div>
+      <!-- School Logo -->
+      <img src="./SSN-MAIN-banner-img-101.png" alt="School Logo" class="logo">
+
+      <h2>Shiv Shiksha Niketan Sr Sec School, Pehowa</h2>
+      <p><strong>Address:</strong>  Model Town, Pehowa, Haryana 136128</p>
+      <p><strong>Phone:</strong> +91  98135 85340</p>
+
+      <!-- Google Map -->
+      <iframe class="location-map"
+         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3455.711065020018!2d76.57745507415711!3d29.987732621258065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390e25baf532dffd%3A0x4e8b14083942b318!2sShiv%20Shiksha%20Niketan%20School!5e0!3m2!1sen!2sin!4v1775850292049!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+
+   
+    <div>
+      <h3>Admissions</h3>
+      <ul>
+        <li><a href="#">Apply Now</a></li>
+        <li><a href="#">Admission Process</a></li>
+        <li><a href="#">Fee Structure</a></li>
+        <li><a href="#">Scholarships</a></li>
+        <li><a href="#">Download Forms</a></li>
+      </ul>
+    </div>
+
+    <div>
+      
+      
+      
+      
+      <h3>Academics</h3>
+      
+      
+      
+      
+      <ul>
+        <li><a href="#">Departments</a></li>
+        <li><a href="#">Programs</a></li>
+        <li><a href="#">Campus</a></li>
+        <li><a href="#">Faculty</a></li>
+        <li><a href="#">Examinations</a></li>
+        <li><a href="#">Results</a></li>
+        <li><a href="#">Activities</a></li>
+      </ul>
+    </div>
+
+    
+    
+    
+    <div>
+      
+      
+      <h3>Facilities</h3>
+      
+      
+      
+      <ul>
+        
+        
+        
+        <li><a href="#">Smart Classes</a></li>
+        <li><a href="#">Library</a></li>
+        <li><a href="#">Computer Lab</a></li>
+        <li><a href="#">Transport</a></li>
+        <li><a href="#">Sports</a></li>
+      
+      
+      
+      </ul>
+    
+    
+    
+    </div>
+
+    <div>
+      
+      
+      
+      <h3>Quick Links</h3>
+      
+      
+      
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Events</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Login</a></li>
+      </ul>
+    
+    
+    </div>
+
+  </div>
+
+  
+  
+  
+  
+  <div class="footer-bottom">
+    
+    
+    © 2026 Shiv Shiksha Niketan Sr Sec School, Pehowa | All Rights Reserved
+  
+  
+  </div>
+
+</footer>
+    
+</body>
+</html>
+
+
